@@ -5,11 +5,7 @@
   "author": {
     "name": "Tsuyoshi Hemmi"
   },
-  "license": "SEE LICENSE",
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/kirin1218/java-quest",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kirin1218/java-quest.git"
-  },
-  "skills": "./skills/"
+  "repository": "https://github.com/kirin1218/java-quest.git"
 }
