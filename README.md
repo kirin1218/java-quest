@@ -121,19 +121,15 @@ Claude Code のセッションで次のように呼び出します。
 java-quest/
 ├── README.md              ← 本ファイル
 ├── SKILL.md               ← スキル本体（リーナの振る舞い・起動フロー・進捗ルール）
-├── curriculum.yaml        ← エリア / ダンジョン / 職業 / レベルテーブル定義
 ├── assets/
 │   └── logo.svg           ← プロジェクトロゴ
 └── docs/
-    ├── boss-and-scoring-rules.md   ← ボス戦・採点基準の詳細
     ├── dag-validation.md           ← 前提関係（DAG）の検証ルール
     ├── english-names.md            ← フォルダ英名規約
-    ├── leena-dialogues.md          ← リーナのセリフ集
-    ├── level-table.md              ← レベル・称号テーブルの詳細
-    └── tamper-detection.md         ← 改竄検知ロジック
+    └── level-table.md              ← レベル・称号テーブルの詳細
 ```
 
-進捗データそのものはこのリポジトリには含まれず、API 経由でサーバー側に保存されます（SKILL.md の「進捗 JSON スキーマ」「進捗更新ルール」参照）。
+カリキュラム定義（エリア / ダンジョン / 職業 / レベルテーブル）はスキル起動時に配信 API（`https://api.kirilab.info/java-quest/v1/curriculum`）から取得されます。進捗データも API 経由でサーバー側に保存され、本リポジトリには含まれません。
 
 ---
 
