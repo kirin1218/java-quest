@@ -1,7 +1,7 @@
 {
   "name": "java-quest",
   "version": "0.1.0",
-  "description": "AIチューター「リーナ」と巡るドラクエ風Java学習スキル（Claude Code Skill）",
+  "description": "AIチューター「リーナ」と巡るRPG風Java学習スキル（Claude Code Skill）",
   "author": {
     "name": "Tsuyoshi Hemmi"
   },
