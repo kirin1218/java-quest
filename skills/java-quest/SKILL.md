@@ -104,12 +104,15 @@ UUID の解決順:
 
 1. `dialogues.md` の「歓迎」を表示
 2. 冒険者名と開発ソースのルートフォルダを聴取
-3. UUID を生成（上記ルール）
-4. `dialogues.md` の「UUID 発行案内」を表示
-5. `config.yaml` と `.identity.yaml` を生成（**スキーマは `schema.md`**）
-6. `dialogues.md` の「AI補助ツール OFF 推奨」を表示し、自己申告（1/2/3）を受け付けて `settings.ai_assist_disabled` に記録
+3. `dialogues.md` の「プライバシーポリシー提示と同意確認」を表示し、同意（1/2）を受け付ける
+   - `1`（同意して進める） → 次のステップへ
+   - `2`（同意しない） → `dialogues.md` の「プライバシー同意拒否」を表示してフローを終了（ファイル生成・API PUT は一切行わない）
+4. UUID を生成（上記ルール）
+5. `dialogues.md` の「UUID 発行案内」を表示
+6. `config.yaml` と `.identity.yaml` を生成（**スキーマは `schema.md`**）
+7. `dialogues.md` の「AI補助ツール OFF 推奨」を表示し、自己申告（1/2/3）を受け付けて `settings.ai_assist_disabled` に記録
    - `2` / `3` を選んだ場合はリーナが代表的な無効化方法を簡潔に案内（ただし **OFF を強制しない**。自己申告で先に進める）
-7. 初期進捗を API に PUT（**ペイロードは `schema.md`**）
+8. 初期進捗を API に PUT（**ペイロードは `schema.md`**）
    - 失敗時 → `dialogues.md` の「初期進捗 PUT 失敗」で停止
 
 #### Primary 存在（= 既存冒険者）
