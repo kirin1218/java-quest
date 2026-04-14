@@ -1,6 +1,6 @@
 ---
 name: java-quest
-description: ドラクエ風Java学習・技術認定スキル。AIチューター「リーナ」がナビゲートする冒険型プログラミング学習。
+description: RPG風Java学習・技術認定スキル。AIチューター「リーナ」がナビゲートする冒険型プログラミング学習。
 ---
 
 # /java-quest スキル
