@@ -1,0 +1,15 @@
+{
+  "name": "java-quest",
+  "version": "0.1.0",
+  "description": "AIチューター「リーナ」と巡るドラクエ風Java学習スキル（Claude Code Skill）",
+  "author": {
+    "name": "Tsuyoshi Hemmi"
+  },
+  "license": "All Rights Reserved",
+  "homepage": "https://github.com/kirin1218/java-quest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirin1218/java-quest.git"
+  },
+  "skills": "./skills/"
+}

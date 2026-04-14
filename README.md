@@ -67,6 +67,19 @@
 
 ---
 
+## インストール
+
+Claude Code のプラグインマーケットプレイス経由で導入します。
+
+```
+/plugin marketplace add kirin1218/java-quest
+/plugin install java-quest@java-quest
+```
+
+インストールが完了すると、`/java-quest` コマンドが使用可能になります。アップデートは `/plugin update java-quest`、削除は `/plugin uninstall java-quest`。
+
+---
+
 ## 使い方
 
 ### Claude Code からの発動
@@ -119,14 +132,24 @@ Claude Code のセッションで次のように呼び出します。
 
 ```
 java-quest/
-├── README.md              ← 本ファイル
-├── SKILL.md               ← スキル本体（リーナの振る舞い・起動フロー・進捗ルール）
+├── README.md                    ← 本ファイル
+├── .claude-plugin/
+│   ├── plugin.json              ← プラグインメタ
+│   └── marketplace.json         ← マーケットプレイス登録情報
+├── skills/
+│   └── java-quest/              ← スキル本体一式
+│       ├── SKILL.md             ← リーナの振る舞い・起動フロー・進捗ルール
+│       ├── dialogues.md         ← セリフ・エラー文テンプレート
+│       ├── presentations.md     ← ステータス／職業／レベルアップ等の画面
+│       ├── rejection-patterns.md ← 答え直接要求のリジェクト・ヒント指針
+│       ├── schema.md            ← config/progress スキーマ定義
+│       └── session-tracking.md  ← 学習時間・セッションログ仕様
 ├── assets/
-│   └── logo.svg           ← プロジェクトロゴ
+│   └── logo.svg                 ← プロジェクトロゴ
 └── docs/
-    ├── dag-validation.md           ← 前提関係（DAG）の検証ルール
-    ├── english-names.md            ← フォルダ英名規約
-    └── level-table.md              ← レベル・称号テーブルの詳細
+    ├── dag-validation.md        ← 前提関係（DAG）の検証ルール
+    ├── english-names.md         ← フォルダ英名規約
+    └── level-table.md           ← レベル・称号テーブルの詳細
 ```
 
 カリキュラム定義（エリア / ダンジョン / 職業 / レベルテーブル）はスキル起動時に配信 API（`https://api.kirilab.info/java-quest/v1/curriculum`）から取得されます。進捗データも API 経由でサーバー側に保存され、本リポジトリには含まれません。
