@@ -8,8 +8,8 @@
 java-quest全65ダンジョンの前提条件（prerequisites）がDAG（有向非巡回グラフ）として正しく構成されているかを検証した。
 
 **データソース:**
-- `contents/java-quest/curriculum.yaml`（MVP 12ダンジョン分の詳細定義）
-- `projects/20260409_java-quest/artifacts/design-v0.1.md`（全65ダンジョンの前提条件）
+- `curriculum.yaml`（MVP 12ダンジョン分の詳細定義）
+- 全体設計書（非公開 / 全65ダンジョンの前提条件）
 
 ## 検証結果サマリー
 
