@@ -55,6 +55,8 @@ uuid: "{生成した UUID v4}"
 
 ## 進捗 JSON（API `PUT /v1/progress/{uuid}` 受付形式）
 
+> **PII保護方針**: API ペイロードに `player.name`（冒険者名）を含めてはならない。サーバー側 validation で受信時点で破棄する設計だが、クライアント側でも送信しないこと。冒険者名はローカル `config.yaml` のみで保持する。
+
 ```json
 {
   "schema_version": "1.0.0",
