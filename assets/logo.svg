@@ -1,340 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="java-quest logo (pixel-art CLI style)" shape-rendering="crispEdges">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="java-quest logo (grayscale pixel-art CRT terminal style)" shape-rendering="crispEdges">
   <title>java-quest</title>
-  <desc>Pixel-art / CRT terminal style logo. Sword + shield emblem on left, "&gt; JAVA-QUEST_" bitmap wordmark on right.</desc>
+  <desc>Pixel-art / CRT terminal style logo in grayscale. Sword + shield emblem on left, "&gt; JAVA-QUEST_" bitmap wordmark on right, with shadow-mask dot overlay for enhanced pixel feel.</desc>
 
   <!-- ============================================================ -->
-  <!-- Background (CRT phosphor: dark green-black)                  -->
+  <!-- Defs: dot-mask pattern + pixel-gap pattern                   -->
   <!-- ============================================================ -->
-  <rect x="0" y="0" width="640" height="220" fill="#0A140A"/>
+  <defs>
+    <!-- Shadow-mask: tiny black dot every 2px creates phosphor-pixel feel -->
+    <pattern id="dotmask" x="0" y="0" width="2" height="2" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="1" height="1" fill="#000000"/>
+    </pattern>
 
-  <!-- Outer frame (phosphor green) -->
-  <rect x="0" y="0" width="640" height="6" fill="#00FF66"/>
-  <rect x="0" y="214" width="640" height="6" fill="#00FF66"/>
-  <rect x="0" y="0" width="6" height="220" fill="#00FF66"/>
-  <rect x="634" y="0" width="6" height="220" fill="#00FF66"/>
+    <!-- Pixel-gap grid for emblem (6px cell): 1px dark gutters every 6px -->
+    <pattern id="gap6" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="6" height="1" fill="#000000"/>
+      <rect x="0" y="0" width="1" height="6" fill="#000000"/>
+    </pattern>
+
+    <!-- Pixel-gap grid for wordmark (4px cell): 1px dark gutters every 4px -->
+    <pattern id="gap4" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="1" fill="#000000"/>
+      <rect x="0" y="0" width="1" height="4" fill="#000000"/>
+    </pattern>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- Background (CRT phosphor, grayscale)                         -->
+  <!-- ============================================================ -->
+  <rect x="0" y="0" width="640" height="220" fill="#0A0A0A"/>
+
+  <!-- Outer frame (bright gray) -->
+  <rect x="0" y="0" width="640" height="6" fill="#D8D8D8"/>
+  <rect x="0" y="214" width="640" height="6" fill="#D8D8D8"/>
+  <rect x="0" y="0" width="6" height="220" fill="#D8D8D8"/>
+  <rect x="634" y="0" width="6" height="220" fill="#D8D8D8"/>
 
   <!-- Inner soft border (dim) -->
-  <rect x="6" y="6" width="628" height="2" fill="#003318"/>
-  <rect x="6" y="212" width="628" height="2" fill="#003318"/>
+  <rect x="6" y="6" width="628" height="2" fill="#262626"/>
+  <rect x="6" y="212" width="628" height="2" fill="#262626"/>
 
   <!-- ============================================================ -->
   <!-- EMBLEM (pixel = 6, cols 12-32, rows 3-26)                    -->
-  <!-- Centered around col 22 (x=132)                                -->
   <!-- ============================================================ -->
 
   <!-- ── Shield (drawn first, sword overlays) ── -->
-  <!-- Colors: outline #00FF66, fill #00331A, dim #006633 -->
+  <!-- Grayscale: outline #D8D8D8, fill #2C2C2C, boss-accent #595959 -->
 
-  <!-- Row 7: cols 16-28 (top edge of shield) -->
-  <rect x="96"  y="42" width="6" height="6" fill="#00FF66"/>
-  <rect x="102" y="42" width="66" height="6" fill="#00331A"/>
-  <rect x="168" y="42" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 7 -->
+  <rect x="96"  y="42" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="102" y="42" width="66" height="6" fill="#2C2C2C"/>
+  <rect x="168" y="42" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 8: cols 15-29 -->
-  <rect x="90"  y="48" width="6" height="6" fill="#00FF66"/>
-  <rect x="96"  y="48" width="78" height="6" fill="#00331A"/>
-  <rect x="174" y="48" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 8 -->
+  <rect x="90"  y="48" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="96"  y="48" width="78" height="6" fill="#2C2C2C"/>
+  <rect x="174" y="48" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 9: cols 14-30 -->
-  <rect x="84"  y="54" width="6" height="6" fill="#00FF66"/>
-  <rect x="90"  y="54" width="90" height="6" fill="#00331A"/>
-  <rect x="180" y="54" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 9 -->
+  <rect x="84"  y="54" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="90"  y="54" width="90" height="6" fill="#2C2C2C"/>
+  <rect x="180" y="54" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Rows 10-19: cols 14-30 (full body) -->
-  <rect x="84"  y="60" width="6" height="60" fill="#00FF66"/>
-  <rect x="90"  y="60" width="90" height="60" fill="#00331A"/>
-  <rect x="180" y="60" width="6" height="60" fill="#00FF66"/>
+  <!-- Rows 10-19: full body -->
+  <rect x="84"  y="60" width="6" height="60" fill="#D8D8D8"/>
+  <rect x="90"  y="60" width="90" height="60" fill="#2C2C2C"/>
+  <rect x="180" y="60" width="6" height="60" fill="#D8D8D8"/>
 
-  <!-- Row 20: cols 15-29 -->
-  <rect x="90"  y="120" width="6" height="6" fill="#00FF66"/>
-  <rect x="96"  y="120" width="78" height="6" fill="#00331A"/>
-  <rect x="174" y="120" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 20 -->
+  <rect x="90"  y="120" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="96"  y="120" width="78" height="6" fill="#2C2C2C"/>
+  <rect x="174" y="120" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 21: cols 16-28 -->
-  <rect x="96"  y="126" width="6" height="6" fill="#00FF66"/>
-  <rect x="102" y="126" width="66" height="6" fill="#00331A"/>
-  <rect x="168" y="126" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 21 -->
+  <rect x="96"  y="126" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="102" y="126" width="66" height="6" fill="#2C2C2C"/>
+  <rect x="168" y="126" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 22: cols 17-27 -->
-  <rect x="102" y="132" width="6" height="6" fill="#00FF66"/>
-  <rect x="108" y="132" width="54" height="6" fill="#00331A"/>
-  <rect x="162" y="132" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 22 -->
+  <rect x="102" y="132" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="108" y="132" width="54" height="6" fill="#2C2C2C"/>
+  <rect x="162" y="132" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 23: cols 19-25 -->
-  <rect x="114" y="138" width="6" height="6" fill="#00FF66"/>
-  <rect x="120" y="138" width="30" height="6" fill="#00331A"/>
-  <rect x="150" y="138" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 23 -->
+  <rect x="114" y="138" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="120" y="138" width="30" height="6" fill="#2C2C2C"/>
+  <rect x="150" y="138" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 24: cols 20-24 -->
-  <rect x="120" y="144" width="6" height="6" fill="#00FF66"/>
-  <rect x="126" y="144" width="18" height="6" fill="#00331A"/>
-  <rect x="144" y="144" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 24 -->
+  <rect x="120" y="144" width="6" height="6" fill="#D8D8D8"/>
+  <rect x="126" y="144" width="18" height="6" fill="#2C2C2C"/>
+  <rect x="144" y="144" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Row 25: col 22 (bottom point) -->
-  <rect x="132" y="150" width="6" height="6" fill="#00FF66"/>
+  <!-- Row 25: bottom point -->
+  <rect x="132" y="150" width="6" height="6" fill="#D8D8D8"/>
 
-  <!-- Shield boss (decorative center, drawn over fill) -->
-  <rect x="126" y="78" width="18" height="6" fill="#006633"/>
-  <rect x="120" y="84" width="30" height="6" fill="#006633"/>
-  <rect x="120" y="90" width="30" height="6" fill="#006633"/>
-  <rect x="126" y="96" width="18" height="6" fill="#006633"/>
+  <!-- Shield boss decorative center -->
+  <rect x="126" y="78" width="18" height="6" fill="#595959"/>
+  <rect x="120" y="84" width="30" height="6" fill="#595959"/>
+  <rect x="120" y="90" width="30" height="6" fill="#595959"/>
+  <rect x="126" y="96" width="18" height="6" fill="#595959"/>
 
   <!-- ── Sword (overlays shield) ── -->
-  <!-- Colors: blade #CCFFCC, edge #66FF99, guard #00FF66, grip #663311, pommel #FFB000 -->
+  <!-- Grayscale: blade-highlight #F2F2F2, blade-edge #A8A8A8, guard #BFBFBF, guard-shadow #4D4D4D, grip #404040, pommel #C8C8C8 -->
 
-  <!-- Row 3: tip col 22 -->
-  <rect x="132" y="18" width="6" height="6" fill="#CCFFCC"/>
+  <!-- Row 3: tip -->
+  <rect x="132" y="18" width="6" height="6" fill="#F2F2F2"/>
 
-  <!-- Row 4: col 22 -->
-  <rect x="132" y="24" width="6" height="6" fill="#CCFFCC"/>
+  <!-- Row 4 -->
+  <rect x="132" y="24" width="6" height="6" fill="#F2F2F2"/>
 
-  <!-- Rows 5-17: blade cols 21-23 (3 wide, 13 rows) -->
-  <rect x="126" y="30" width="6" height="78" fill="#66FF99"/>
-  <rect x="132" y="30" width="6" height="78" fill="#CCFFCC"/>
-  <rect x="138" y="30" width="6" height="78" fill="#66FF99"/>
+  <!-- Rows 5-17: blade (3 wide, 13 rows) -->
+  <rect x="126" y="30" width="6" height="78" fill="#A8A8A8"/>
+  <rect x="132" y="30" width="6" height="78" fill="#F2F2F2"/>
+  <rect x="138" y="30" width="6" height="78" fill="#A8A8A8"/>
 
-  <!-- Row 18: guard wide cols 16-28 -->
-  <rect x="96" y="108" width="78" height="6" fill="#FFB000"/>
-  <!-- Row 19: guard cols 16-28 (slightly inset look via darker shade at ends) -->
-  <rect x="96" y="114" width="6" height="6" fill="#7A4A00"/>
-  <rect x="102" y="114" width="66" height="6" fill="#FFB000"/>
-  <rect x="168" y="114" width="6" height="6" fill="#7A4A00"/>
+  <!-- Row 18: guard wide -->
+  <rect x="96" y="108" width="78" height="6" fill="#BFBFBF"/>
+  <!-- Row 19: guard with shadow caps -->
+  <rect x="96"  y="114" width="6"  height="6" fill="#4D4D4D"/>
+  <rect x="102" y="114" width="66" height="6" fill="#BFBFBF"/>
+  <rect x="168" y="114" width="6"  height="6" fill="#4D4D4D"/>
 
-  <!-- Rows 20-21: grip col 22 -->
-  <rect x="132" y="120" width="6" height="12" fill="#663311"/>
+  <!-- Rows 20-21: grip -->
+  <rect x="132" y="120" width="6" height="12" fill="#404040"/>
 
-  <!-- Row 22: pommel cols 21-23 -->
-  <rect x="126" y="132" width="18" height="6" fill="#FFB000"/>
+  <!-- Row 22: pommel -->
+  <rect x="126" y="132" width="18" height="6" fill="#C8C8C8"/>
+
+  <!-- Pixel-gap overlay on emblem region (enhances dot feel) -->
+  <rect x="78" y="12" width="120" height="150" fill="url(#gap6)" opacity="0.55"/>
 
   <!-- ============================================================ -->
   <!-- Prompt prefix and bitmap wordmark "JAVA-QUEST_"               -->
-  <!-- pixel = 4, char grid = 5x7, char advance = 24 (5+1)*4         -->
-  <!-- Start at x=290, y=70                                          -->
-  <!-- Color: #00FF66 (phosphor green), cursor #FFB000 (amber blink) -->
+  <!-- pixel = 4, chars at y=70..94                                  -->
+  <!-- Grayscale: main #D8D8D8, cursor #C8C8C8 (blink)               -->
   <!-- ============================================================ -->
 
-  <!-- "> " (prompt char at base_x = 290) -->
-  <!-- > shape:
-       X....
-       .X...
-       ..X..
-       ...X.
-       ..X..
-       .X...
-       X.... -->
-  <rect x="290" y="70" width="4" height="4" fill="#00FF66"/>
-  <rect x="294" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="298" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="302" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="298" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="294" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="290" y="94" width="4" height="4" fill="#00FF66"/>
+  <!-- "> " -->
+  <rect x="290" y="70" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="294" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="298" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="302" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="298" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="294" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="290" y="94" width="4" height="4" fill="#D8D8D8"/>
 
-  <!-- (skip char 1 = space, base_x = 314) -->
+  <!-- J -->
+  <rect x="346" y="70" width="12" height="4" fill="#D8D8D8"/>
+  <rect x="350" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="350" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="350" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="350" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="338" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="350" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="342" y="94" width="8" height="4" fill="#D8D8D8"/>
 
-  <!-- J at base_x = 338
-       ..XXX
-       ...X.
-       ...X.
-       ...X.
-       ...X.
-       X..X.
-       .XX.. -->
-  <rect x="346" y="70" width="12" height="4" fill="#00FF66"/>
-  <rect x="350" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="350" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="350" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="350" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="338" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="350" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="342" y="94" width="8" height="4" fill="#00FF66"/>
+  <!-- A (1) -->
+  <rect x="366" y="70" width="12" height="4" fill="#D8D8D8"/>
+  <rect x="362" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="378" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="362" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="378" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="362" y="82" width="20" height="4" fill="#D8D8D8"/>
+  <rect x="362" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="378" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="362" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="378" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="362" y="94" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="378" y="94" width="4" height="4" fill="#D8D8D8"/>
 
-  <!-- A at base_x = 362
-       .XXX.
-       X...X
-       X...X
-       XXXXX
-       X...X
-       X...X
-       X...X -->
-  <rect x="366" y="70" width="12" height="4" fill="#00FF66"/>
-  <rect x="362" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="378" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="362" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="378" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="362" y="82" width="20" height="4" fill="#00FF66"/>
-  <rect x="362" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="378" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="362" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="378" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="362" y="94" width="4" height="4" fill="#00FF66"/>
-  <rect x="378" y="94" width="4" height="4" fill="#00FF66"/>
+  <!-- V -->
+  <rect x="386" y="70" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="402" y="70" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="386" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="402" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="386" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="402" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="386" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="402" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="386" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="402" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="390" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="398" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="394" y="94" width="4" height="4" fill="#D8D8D8"/>
 
-  <!-- V at base_x = 386
-       X...X
-       X...X
-       X...X
-       X...X
-       X...X
-       .X.X.
-       ..X.. -->
-  <rect x="386" y="70" width="4" height="4" fill="#00FF66"/>
-  <rect x="402" y="70" width="4" height="4" fill="#00FF66"/>
-  <rect x="386" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="402" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="386" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="402" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="386" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="402" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="386" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="402" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="390" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="398" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="394" y="94" width="4" height="4" fill="#00FF66"/>
+  <!-- A (2) -->
+  <rect x="414" y="70" width="12" height="4" fill="#D8D8D8"/>
+  <rect x="410" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="426" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="410" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="426" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="410" y="82" width="20" height="4" fill="#D8D8D8"/>
+  <rect x="410" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="426" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="410" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="426" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="410" y="94" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="426" y="94" width="4" height="4" fill="#D8D8D8"/>
 
-  <!-- A at base_x = 410 -->
-  <rect x="414" y="70" width="12" height="4" fill="#00FF66"/>
-  <rect x="410" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="426" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="410" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="426" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="410" y="82" width="20" height="4" fill="#00FF66"/>
-  <rect x="410" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="426" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="410" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="426" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="410" y="94" width="4" height="4" fill="#00FF66"/>
-  <rect x="426" y="94" width="4" height="4" fill="#00FF66"/>
+  <!-- - (hyphen) -->
+  <rect x="434" y="82" width="20" height="4" fill="#D8D8D8"/>
 
-  <!-- - at base_x = 434 (only middle row 3) -->
-  <rect x="434" y="82" width="20" height="4" fill="#00FF66"/>
+  <!-- Q -->
+  <rect x="462" y="70" width="12" height="4" fill="#D8D8D8"/>
+  <rect x="458" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="474" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="458" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="474" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="458" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="474" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="458" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="466" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="474" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="458" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="470" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="462" y="94" width="8" height="4" fill="#D8D8D8"/>
+  <rect x="474" y="94" width="4" height="4" fill="#D8D8D8"/>
 
-  <!-- Q at base_x = 458
-       .XXX.
-       X...X
-       X...X
-       X...X
-       X.X.X
-       X..X.
-       .XX.X -->
-  <rect x="462" y="70" width="12" height="4" fill="#00FF66"/>
-  <rect x="458" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="474" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="458" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="474" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="458" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="474" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="458" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="466" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="474" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="458" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="470" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="462" y="94" width="8" height="4" fill="#00FF66"/>
-  <rect x="474" y="94" width="4" height="4" fill="#00FF66"/>
+  <!-- U -->
+  <rect x="482" y="70" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="498" y="70" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="482" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="498" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="482" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="498" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="482" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="498" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="482" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="498" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="482" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="498" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="486" y="94" width="12" height="4" fill="#D8D8D8"/>
 
-  <!-- U at base_x = 482
-       X...X
-       X...X
-       X...X
-       X...X
-       X...X
-       X...X
-       .XXX. -->
-  <rect x="482" y="70" width="4" height="4" fill="#00FF66"/>
-  <rect x="498" y="70" width="4" height="4" fill="#00FF66"/>
-  <rect x="482" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="498" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="482" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="498" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="482" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="498" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="482" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="498" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="482" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="498" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="486" y="94" width="12" height="4" fill="#00FF66"/>
+  <!-- E -->
+  <rect x="506" y="70" width="20" height="4" fill="#D8D8D8"/>
+  <rect x="506" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="506" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="506" y="82" width="16" height="4" fill="#D8D8D8"/>
+  <rect x="506" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="506" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="506" y="94" width="20" height="4" fill="#D8D8D8"/>
 
-  <!-- E at base_x = 506
-       XXXXX
-       X....
-       X....
-       XXXX.
-       X....
-       X....
-       XXXXX -->
-  <rect x="506" y="70" width="20" height="4" fill="#00FF66"/>
-  <rect x="506" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="506" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="506" y="82" width="16" height="4" fill="#00FF66"/>
-  <rect x="506" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="506" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="506" y="94" width="20" height="4" fill="#00FF66"/>
+  <!-- S -->
+  <rect x="534" y="70" width="16" height="4" fill="#D8D8D8"/>
+  <rect x="530" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="530" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="534" y="82" width="12" height="4" fill="#D8D8D8"/>
+  <rect x="546" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="546" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="530" y="94" width="16" height="4" fill="#D8D8D8"/>
 
-  <!-- S at base_x = 530
-       .XXXX
-       X....
-       X....
-       .XXX.
-       ....X
-       ....X
-       XXXX. -->
-  <rect x="534" y="70" width="16" height="4" fill="#00FF66"/>
-  <rect x="530" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="530" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="534" y="82" width="12" height="4" fill="#00FF66"/>
-  <rect x="546" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="546" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="530" y="94" width="16" height="4" fill="#00FF66"/>
+  <!-- T -->
+  <rect x="554" y="70" width="20" height="4" fill="#D8D8D8"/>
+  <rect x="562" y="74" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="562" y="78" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="562" y="82" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="562" y="86" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="562" y="90" width="4" height="4" fill="#D8D8D8"/>
+  <rect x="562" y="94" width="4" height="4" fill="#D8D8D8"/>
 
-  <!-- T at base_x = 554
-       XXXXX
-       ..X..
-       ..X..
-       ..X..
-       ..X..
-       ..X..
-       ..X.. -->
-  <rect x="554" y="70" width="20" height="4" fill="#00FF66"/>
-  <rect x="562" y="74" width="4" height="4" fill="#00FF66"/>
-  <rect x="562" y="78" width="4" height="4" fill="#00FF66"/>
-  <rect x="562" y="82" width="4" height="4" fill="#00FF66"/>
-  <rect x="562" y="86" width="4" height="4" fill="#00FF66"/>
-  <rect x="562" y="90" width="4" height="4" fill="#00FF66"/>
-  <rect x="562" y="94" width="4" height="4" fill="#00FF66"/>
-
-  <!-- _ cursor at base_x = 578 (amber, blinking) -->
-  <rect x="578" y="94" width="20" height="4" fill="#FFB000">
+  <!-- _ cursor (blinking, neutral bright) -->
+  <rect x="578" y="94" width="20" height="4" fill="#C8C8C8">
     <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- ============================================================ -->
-  <!-- Subtitle: "[ ADVENTURE IN JAVA ]" - bitmap pixel=2            -->
-  <!-- Start at x=290, y=128. char advance = 12 (5+1)*2              -->
-  <!-- Color: #006633 (dim phosphor)                                 -->
-  <!-- ============================================================ -->
+  <!-- Pixel-gap overlay on wordmark region (enhances dot feel) -->
+  <rect x="288" y="68" width="312" height="32" fill="url(#gap4)" opacity="0.55"/>
 
-  <!-- "[ ADVENTURE-IN-JAVA ]" rendered using monospace text in pixel-style  -->
-  <!-- For brevity, use SVG text with monospace font sized to match pixel grid -->
+  <!-- ============================================================ -->
+  <!-- Subtitle "[ ADVENTURE  IN  JAVA ]" (dim gray)                -->
+  <!-- ============================================================ -->
   <text x="290" y="142"
         font-family="ui-monospace, 'Menlo', 'Consolas', monospace"
         font-size="14" font-weight="700"
-        fill="#006633" letter-spacing="2">[ ADVENTURE  IN  JAVA ]</text>
+        fill="#808080" letter-spacing="2">[ ADVENTURE  IN  JAVA ]</text>
 
   <!-- ============================================================ -->
-  <!-- System status line (bottom): mock CLI output                  -->
+  <!-- System status line (dim)                                     -->
   <!-- ============================================================ -->
   <text x="290" y="180"
         font-family="ui-monospace, 'Menlo', 'Consolas', monospace"
-        font-size="11" fill="#00FF66" opacity="0.65">
+        font-size="11" fill="#B0B0B0" opacity="0.65">
     <tspan x="290" dy="0">[OK] curriculum.cache loaded</tspan>
     <tspan x="290" dy="14">[OK] guild.api  connected</tspan>
   </text>
 
   <!-- ============================================================ -->
-  <!-- CRT Scanlines overlay (every 4px, 1px lines, low opacity)    -->
+  <!-- CRT dot-mask overlay: 2px phosphor-pixel feel across entire  -->
+  <!-- canvas (inside the frame). Low opacity so artwork remains.   -->
   <!-- ============================================================ -->
-  <g fill="#000000" opacity="0.18">
+  <rect x="6" y="6" width="628" height="208" fill="url(#dotmask)" opacity="0.35"/>
+
+  <!-- ============================================================ -->
+  <!-- CRT Scanlines overlay (horizontal)                            -->
+  <!-- ============================================================ -->
+  <g fill="#000000" opacity="0.20">
     <rect x="0" y="0"   width="640" height="1"/>
     <rect x="0" y="4"   width="640" height="1"/>
     <rect x="0" y="8"   width="640" height="1"/>
