@@ -1,0 +1,16 @@
+{
+  "name": "java-quest",
+  "owner": {
+    "name": "Tsuyoshi Hemmi"
+  },
+  "plugins": [
+    {
+      "name": "java-quest",
+      "source": {
+        "source": "github",
+        "repo": "kirin1218/java-quest"
+      },
+      "description": "AIチューター「リーナ」と巡るドラクエ風Java学習スキル"
+    }
+  ]
+}
