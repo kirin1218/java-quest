@@ -6,7 +6,10 @@
   "plugins": [
     {
       "name": "java-quest",
-      "source": ".",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/kirin1218/java-quest.git"
+      },
       "description": "AIチューター「リーナ」と巡るRPG風Java学習スキル"
     }
   ]
