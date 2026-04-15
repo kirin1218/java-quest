@@ -6,8 +6,13 @@
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-04-15 — Alpha consent dialogue & doc polish
+
+`/plugin update` のキャッシュ更新を確実に走らせるため、本リリース以降アルファ期は修正のたびに patch をインクリメントする。
+
 ### Fixed
 - プライバシー同意画面のセリフ（`dialogues.md`）を PRIVACY.md と整合させた — 冒険者名をサーバー保存項目から除外し、IP アドレスは運用目的のみで UUID と紐付けない旨を明示
+- マーケットプレイス `source` 形式と `plugin.json` スキーマを Claude Code 公式形式に修正（HTTPS url 形式 / repository 文字列形式）
 
 ### Added
 - README 冒頭にアルファ版バナーを追加（仕様・API・データスキーマの破壊的変更、サーバー停止、データリセット可能性の明示）
@@ -55,7 +60,8 @@
 
 ---
 
-[Unreleased]: https://github.com/kirin1218/java-quest/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/kirin1218/java-quest/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/kirin1218/java-quest/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/kirin1218/java-quest/releases/tag/v0.1.0
 
 ```
