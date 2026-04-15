@@ -6,6 +6,11 @@
 
 ## [Unreleased]
 
+## [0.1.2] — 2026-04-15 — Fix scaffolding regression
+
+### Fixed
+- 通常演習・ボス課題で課題フォルダと骨格 `.java` が自動生成されない不具合を修正（SKILL.md 圧縮（PR #12）以降、文章短縮で「誰がファイルを作るか」が曖昧になり冒険者に丸投げされていた）— 手順を「Bash で mkdir → Write で README → Write で骨格 `.java`」に明示化し、エリア別の骨格内容を表で固定
+
 ## [0.1.1] — 2026-04-15 — Alpha consent dialogue & doc polish
 
 `/plugin update` のキャッシュ更新を確実に走らせるため、本リリース以降アルファ期は修正のたびに patch をインクリメントする。
@@ -60,7 +65,8 @@
 
 ---
 
-[Unreleased]: https://github.com/kirin1218/java-quest/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/kirin1218/java-quest/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/kirin1218/java-quest/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/kirin1218/java-quest/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/kirin1218/java-quest/releases/tag/v0.1.0
 
