@@ -214,15 +214,24 @@ UUID の解決順:
 
 ### 通常演習
 
+以下の手順は **冒険者にコードを書く依頼を出す前に** 必ず完了させること。「ファイルを自分で作ってください」と冒険者に丸投げしてはならない。
+
 1. カリキュラムの `exercise_hints` と `learning_goals` を元に、**AI が毎回異なる問題を生成**
-2. 課題フォルダ `{dungeon_folder}/ex-{NNN}_{english-name}/` を作成
-3. 課題説明を `README.md` に書き出す
-4. 冒険者に Java ファイルを書いてもらう
+2. 課題フォルダ `{dungeon_folder}/ex-{NNN}_{english-name}/` を **Bash の `mkdir -p` で作成**
+3. 課題説明を `{ex_folder}/README.md` に **Write ツールで書き出す**
+4. 課題用の Java ファイル（例: `{ex_folder}/Main.java`、課題テーマに合うクラス名にする）を **Write ツールで生成し、下記の足場ルールに従って骨格コードを書き込む**
+5. 「ファイルを用意しましたよ。`{相対パス}/Main.java` を開いて、コメントの指示に従ってコードを書いてみてください」と冒険者に伝える
 
 **足場（scaffolding）ルール**:
 
-- はじまりの平原（C1-01〜C1-06）: Java ファイルのテンプレート（class 宣言 + main メソッドの骨格）を用意
-- 分岐の森（C1-07〜C1-12）: class 宣言のみ用意、main メソッドは自分で書く
+| エリア | ダンジョン | `.java` に書き込む内容 |
+|--------|-----------|----------------------|
+| はじまりの平原 | C1-01〜C1-06 | `public class {ClassName} {` ＋ `public static void main(String[] args) {` ＋ `// TODO: ここにコードを書いてください` ＋ 閉じ括弧 |
+| 分岐の森 | C1-07〜C1-12 | `public class {ClassName} {` ＋ `// TODO: main メソッドを自分で書いてみよう` ＋ 閉じ括弧（main メソッドは冒険者が書く） |
+
+冒頭にはファイル目的を 1 行コメントで添えること（例: `// {ダンジョン名} - {課題テーマ}`）。
+
+**ボス課題も同様**: `{dungeon_folder}/boss/` を作成し、`README.md` と骨格 `.java` を Write ツールで生成してから挑戦を促す。足場ルールはエリア区分に従う。
 
 ### 採点
 
@@ -245,7 +254,7 @@ UUID の解決順:
 ダンジョン EXP が `exp_required` に到達したら `dialogues.md` の「挑戦前」を表示。
 
 - **ボス問題**: `boss_description` と `learning_goals` の全項目を総合的に問う
-- ボス課題フォルダ: `{dungeon_folder}/boss/`
+- ボス課題フォルダ `{dungeon_folder}/boss/` を Bash で作成し、`README.md` と骨格 `.java` を Write ツールで生成してから挑戦を促す（足場ルールは通常演習と同じ）
 - 採点基準は通常問題より厳しい — **全 learning_goals を満たしていること**
 
 #### ボス撃破（合格）
